@@ -1,0 +1,34 @@
+{
+    "name": "bavix/dagent-client",
+    "description": "Working with the dagent service.",
+    "keywords": [
+        "agent",
+        "client",
+        "dagent",
+        "dashboard",
+        "grafana",
+        "prometheus"
+    ],
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Babichev Maxim",
+            "email": "info@babichev.net"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ramsey/uuid": "^3.0|^4.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bavix\\DAgent\\": "src/"
+        }
+    }
+}
