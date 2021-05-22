@@ -18,6 +18,7 @@ class Client
 
     public function __construct(
         private string $apiUrl,
+        private
         private GuzzleClient $guzzleClient
     ) {
     }
@@ -39,6 +40,6 @@ class Client
         $body = json_encode(['data' => $messages], JSON_THROW_ON_ERROR);
         $request = new Request('POST', $this->apiUrl, $this->headers, $body);
 
-        return $this->guzzleClient->sendRequest($request);
+        return $this->guzzleClient->send($request, ['timeout' => .1]);
     }
 }
