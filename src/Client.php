@@ -18,7 +18,6 @@ class Client
 
     public function __construct(
         private string $apiUrl,
-        private
         private GuzzleClient $guzzleClient
     ) {
     }
