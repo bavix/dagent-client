@@ -14,6 +14,8 @@ class MessageDto implements JsonSerializable
         private array $tags = [],
         private int $duration = 0
     ) {
+        // @hack cast to string type
+        $this->tags = array_map(fn ($value) => (string) $value, $tags);
     }
 
     public function getName(): string
